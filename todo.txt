@@ -1,4 +1,0 @@
--In class name line, remove '::' between Class and method
--Try indenting for each 'describe' level
--Assertions in summary
--Green indicator in summary

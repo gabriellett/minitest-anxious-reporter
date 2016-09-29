@@ -3,10 +3,10 @@ require 'minitest/autorun'
 require 'ansi/code'
 
 module Minitest
-  module DocReporter
-    require "minitest/doc_reporter/version"
+  module AnxiousReporter
+    require "minitest/anxious_reporter/version"
 
-    class DocReporter < AbstractReporter
+    class AnxiousReporter < AbstractReporter
       include ANSI::Code
 
       attr_reader :io, :options, :results

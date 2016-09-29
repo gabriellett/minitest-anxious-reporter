@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'minitest/doc_reporter/version'
+require 'minitest/anxious_reporter/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "minitest-doc_reporter"
-  spec.version       = Minitest::DocReporter::VERSION
-  spec.authors       = ["Jason Thompson"]
-  spec.email         = ["jason@jthompson.ca"]
-  spec.description   = %q{A detailed spec-by-spec report for Minitest}
-  spec.summary       = %q{Provides a detailed report modelled after the documentation report style in rspec.}
-  spec.homepage      = "http://github.com/jasonthompson/minitest-doc_reporter"
+  spec.name          = "minitest-anxious-reporter"
+  spec.version       = Minitest::AnxiousReporter::VERSION
+  spec.authors       = ["Gabriel Lett"]
+  spec.email         = ["gabriel.lett.viviani@gmail.com"]
+  spec.description   = %q{A detailed errors while in progress reporter for Minitest}
+  spec.summary       = %q{Provides a better fail description while the tests are running.}
+  spec.homepage      = "http://github.com/gabriellett/minitest-anxious-reporter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
