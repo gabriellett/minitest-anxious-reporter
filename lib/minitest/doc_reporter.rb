@@ -56,6 +56,10 @@ module Minitest
         puts
       end
 
+      def passed?
+        self.failures + self.errors == 0
+      end
+
       private
 
       def failure_info(result)
