@@ -118,7 +118,7 @@ module Minitest
 
       def format_result(result)
         output = ""
-        name = format_test_description result
+        name = result.name
 
         if result.passed?
           output =  ANSI.green {name}
@@ -127,12 +127,6 @@ module Minitest
         end
 
         pad output
-      end
-
-      def format_test_description(result)
-        verb = result.name.split[0].split("_").last
-        phrase = result.name.split[1..-1].join " "
-        "#{verb} #{phrase}"
       end
 
       def format_header(result)
