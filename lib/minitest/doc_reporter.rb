@@ -11,7 +11,7 @@ module Minitest
 
       attr_reader :io, :options, :results
 
-      attr_accessor :start_time, :total_time, :failures, :errors, :skips, :count, 
+      attr_accessor :start_time, :total_time, :failures, :errors, :skips, :count,
         :results
 
       def initialize(options = {})
@@ -53,7 +53,7 @@ module Minitest
         puts
         puts format_tests_run_count(count, total_time)
         puts statistics
-        puts
+        puts ANSI.red { failures_summary }
       end
 
       def passed?
@@ -61,6 +61,17 @@ module Minitest
       end
 
       private
+
+      def failures_summary
+        filtered_results = results.dup
+        filtered_results.reject!(&:skipped?) unless options[:verbose]
+
+        s = filtered_results.each_with_index.map { |result, i|
+          "\n%3d) %s" % [i+1, result]
+        }.join("\n") + "\n"
+
+        s
+      end
 
       def failure_info(result)
         if result.error?
