@@ -1,6 +1,6 @@
 # minitest-anxious-reporter
 
-![Gem Version](https://badge.fury.io/rb/minitest-anxious-reporter.png)
+[![Gem Version](https://badge.fury.io/rb/minitest-anxious-reporter.svg)](https://badge.fury.io/rb/minitest-anxious-reporter)
 
 A more detailed reporter for minitest inspired by the documentation output of
 Rspec.
