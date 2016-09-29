@@ -2,8 +2,14 @@
 
 [![Gem Version](https://badge.fury.io/rb/minitest-anxious-reporter.svg)](https://badge.fury.io/rb/minitest-anxious-reporter)
 
-A more detailed reporter for minitest inspired by the documentation output of
-Rspec.
+A more detailed reporter for minitest inspired by the documentation output of Rspec. 
+
+It will show your error while they occur and print the error summary. The motivation for this gem was that
+the original minitest reporter didn't worked with Jenkins (it wouldn't show the `dots` indicating progress)
+and the original `doc_reporter` gem don't have a detailed failure report in the end and also didn't exited
+with the correct code when fails occurred.
+
+Forked from [jasonthompson/minitest-doc_reporter](https://github.com/jasonthompson/minitest-doc_reporter)
 
 ## Install
 
@@ -25,8 +31,4 @@ gem "minitest-anxious-reporter"
 
 ## Usage
 
-Add the following to the top of your minitest file or you spec_helper file:
-
-```require 'minitest/anxious-reporter'```
-
-This will replace Minitest's default reports with minitest-anxious-reporter's.
+Simply bundle it and it will replace your current reporter automatically.
