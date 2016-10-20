@@ -25,7 +25,11 @@ module Minitest
       end
 
       def start
+        puts "Run options: #{options[:args]}"
         puts
+        puts "# Running:"
+        puts
+
         self.start_time = Time.now
       end
 
