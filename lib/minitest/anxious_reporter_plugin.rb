@@ -7,7 +7,6 @@ module Minitest
   end
 
   def self.plugin_anxious_reporter_init(options)
-    self.reporter.reporters = []
     self.reporter << AnxiousReporter::AnxiousReporter.new(options)
   end
 end
